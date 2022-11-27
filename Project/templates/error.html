@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Error!
+{% endblock %}
+
+{% block main %}
+<body>
+    <div class="'container-fluid">
+        <h1 class="errors">You've encountered an error! :c</h1>
+        <h3 class="errors">{{ error }}</h3>
+        <p id="errori">
+            <img src="/static/error.gif">
+        </p>
+    </div>
+</body>
+{% endblock %}

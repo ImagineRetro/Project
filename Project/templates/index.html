@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BMI Calculator
+{% endblock %}
+
+{% block main %}
+<body>
+    <div class="container-fluid" id="Introduction">
+        <h1  id="title">
+            The most intuitive BMI calculator on the internet!
+        </h1>
+        &nbsp;
+        &nbsp;
+        <div class="container text-center" id="columns">
+            <div class="row align-items-start">
+                <div class="col" id="coli" id="colcol">
+                    &nbsp;
+                    <h3>
+                        What is the BMI?
+                    </h3>
+
+                    <p id="explain">
+                        Body mass index (BMI) is a value derived from the mass (weight) and height of a person.
+                        The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m2,
+                        resulting from mass in kilograms and height in metres. We made this website to make the process of finding your BMI easier for you!
+
+                    </p>
+                    &nbsp;
+                    <form method="post">
+                        <p id="button1">
+                            <button type="submit" id ="calc" class="btn btn-outline-success btn-lg"">Take me to the Calculator!</button>
+                        </p>
+                    </form>
+                </div>
+                <div class="col">
+                    <img src="/static/gif.gif" id="gif">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

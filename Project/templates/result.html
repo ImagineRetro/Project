@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Results!
+{% endblock %}
+
+{% block main %}
+<body>
+    <div class="container-fluid" id="Introduction">
+        <h1  id="title">
+            Your Results are In!
+        </h1>
+        &nbsp;
+        &nbsp;
+        <div class="container text-center" id="columns">
+            <div class="row align-items-start">
+                <div class="col" id="coli" id="colcol">
+                    &nbsp;
+                    <h3>
+                        What does your result tell you?
+                    </h3>
+
+                    <p id="explainer">
+                        We calculated your BMI to be {{ BMIn}}.
+                        This means, {{ msg}}
+                    </p>
+
+                    <h3>
+                        Disclaimer: Limitations of BMI
+                    </h3>
+
+                    <p id="explain">
+                        Although BMI is a widely used and useful indicator of healthy body weight, it does have its limitations. BMI is only an estimate that cannot take body composition into account. Due to a wide variety of body types as well as distribution of muscle, bone mass, and fat, BMI should be considered along with other measurements rather than being used as the sole method for determining a person's healthy body weight.
+                    </p>
+
+
+
+                    &nbsp;
+                    <p id="button1">
+                        <button type="submit" id ="calc" class="btn btn-outline-success btn-lg" onclick="location.href = '/calculator';">Caculate my BMI again!</button>
+                    </p>
+                    </form>
+                </div>
+                <div class="col">
+                    <img src="/static/weight.gif" id="weightgif"">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

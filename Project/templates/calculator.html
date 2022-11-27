@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    BMI Calculator
+{% endblock %}
+
+{% block main %}
+<body>
+    <div class="container-fluid" id="Introduction">
+        <h1  id="title">
+            Enter your data below to find your BMI!
+        </h1>
+        &nbsp;
+        &nbsp;
+        <div class="container text-center"  id="columns">
+            <div class="row align-items-start">
+                <div class="col" id="coli">
+                    <p id="faq">
+                        <h3>
+                        FAQ:
+                        Confused?
+                        </h3>
+                        For Inches and Pounds select 'Imperial'.
+                        For Centimetres and Kilograms select 'Metric.'
+                    </p>
+                    <form method="POST" action="/calculator">
+                        <form>
+                            <div class="row mb-3">
+                              <label for="inputweight" class="col-sm-2 col-form-label">Weight:</label>
+                              <div class="col-sm-10">
+                                <input type="text" name="weight" class="form-control" id="inputweight" autocomplete="off">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="inputheight" class="col-sm-2 col-form-label">Height:</label>
+                              <div class="col-sm-10">
+                                <input type="text" name="height" class="form-control" id="inputheight" autocomplete="off">
+                              </div>
+                            </div>
+                            <fieldset class="row mb-3">
+                              <legend class="col-form-label col-sm-2 pt-0">Units:</legend>
+                              <div class="col-sm-10">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="radios" id="gridRadios1" value="imperial" checked>
+                                  <label class="form-check-label" for="gridRadios1">
+                                    Imperial System
+                                  </label>
+                                </div>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="radios" id="gridRadios2" value="metric">
+                                  <label class="form-check-label" for="gridRadios2">
+                                    Metric system
+                                  </label>
+                                </div>
+                              </div>
+                            </fieldset>
+                            <button type="submit" class="btn btn-primary">Calculate!</button>
+                          </form>
+                    </form>
+                </div>
+            <div class="col">
+                <img src="/static/calculating.gif" id="gif">
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}
